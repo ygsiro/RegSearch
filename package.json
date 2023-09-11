@@ -1,5 +1,5 @@
 {
-  "name": "regsearch",
+  "name": "reg_search",
   "displayName": "RegSearch",
   "description": "",
   "version": "0.0.1",
@@ -12,12 +12,29 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "views": {
+      "RegSearch-Container": [
+        {
+          "id": "RegSearch-id",
+          "name": "RegSearch-id name"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "regsearch.helloWorld",
+        "command": "RegSearch.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "RegSearch-Container",
+          "icon": "./BarIcon.svg",
+          "title": "RegSearch"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
